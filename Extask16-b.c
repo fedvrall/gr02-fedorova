@@ -27,7 +27,7 @@ int main()
             row[i].drugName, row[i].indications, row[i].expYears, row[i].mfgYear);
     }
 
-    FILE *printIn = fopen("Extask-b.txt", "w+");
+    FILE *printIn = fopen("Extask16-b.txt", "w+");
     for(int i = 0; i < n; i++)
     { 
         fprintf(printIn, "%s\t%s\t%d\t%d\n", 
