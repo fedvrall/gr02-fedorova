@@ -21,7 +21,7 @@ struct element *last = NULL;
 
 int main()
 {
-    file *f = fopen("extask02-a.txt", "r");
+    FILE *f = fopen("extask02-a.txt", "r");
 
     while(1)
     {
