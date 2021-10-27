@@ -16,7 +16,7 @@ int main()
     printf("\n");
     for(int i = 0; i < months; i++)
         printf("% 6d", salary[i]);
-    printf("\n"); //первое условие - вывести данные о зп
+    printf("\n"); 
 
     float taxSum = 0.0f;
     for(int i = 0; i < months; i++)
@@ -25,7 +25,7 @@ int main()
         printf("% 6.2f", tax);
         taxSum += tax;
     }
-    printf("\n"); //первое условие - вывести данные о зп
+    printf("\n"); 
 
     int sumYear = 0;
     for(int i = 0; i < months; i++)
