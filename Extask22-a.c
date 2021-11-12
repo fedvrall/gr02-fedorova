@@ -33,7 +33,7 @@ int main()
     fwrite(row, sizeof(struct table_row), 3, f);
     fclose(f);
 
-    FILE *ff = fopen("Extask22.bin", "wb+");
+    FILE *ff = fopen("Extask22.bin", "rb+");
     fread(row, sizeof(struct table_row), 3, ff);
     fclose(ff);
 
