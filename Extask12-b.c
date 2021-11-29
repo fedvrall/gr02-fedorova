@@ -40,19 +40,6 @@ int filling(int m, int n)
         }
         putchar('\n');
     }
-
-
-
-       /* for(int i = 0; i < m; i++)
-        {
-            for(int j = 0; j < n; j++)
-                printf("% 4d", a[i][j]);
-            putchar('\t');
-
-            for(int j = 0; j < n; j++)
-                printf("% 4d", b[i][j]);
-            putchar('\n');
-        }*/
 }
 
 void addition ()
@@ -119,20 +106,6 @@ int main()
             }
         }
         while(choice != 0);
-
-        /*
-        for(int i = 0; i < n * 4 / 2; i++)
-            putchar(' ');
-        printf("c");
-        
-        for(int i = 0; i < n * 4 / 2; i++)
-            putchar(' ');
-        putchar('\t');
-
-        for(int i = 0; i < n * 4 / 2; i++)
-            putchar(' ');
-        printf("d\n");*/
-
     }
 
     return 0;
