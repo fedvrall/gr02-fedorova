@@ -91,10 +91,6 @@ int main()
     printf("Введите m (строки) и n (столбцы): ");
     scanf("%d %d", &m, &n);
 
-    //if(n < 0 || n >= nMax || m < 0 || m > mMax)
-    //    puts("Ошибочка");
-    //else
-    //{
         int choice;
         do
         {
@@ -120,7 +116,7 @@ int main()
             }
         }
         while(choice != 0);
-   // }
+        
     for(int i = 0; i < m; i++)
     {
         free(a[i]);
