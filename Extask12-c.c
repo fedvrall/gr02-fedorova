@@ -1,9 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//#define nMax 10
-//#define mMax 10
-
 #define vMin 10
 #define vMax 20
 
@@ -116,7 +113,7 @@ int main()
             }
         }
         while(choice != 0);
-        
+
     for(int i = 0; i < m; i++)
     {
         free(a[i]);
