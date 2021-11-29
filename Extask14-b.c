@@ -58,10 +58,8 @@ int main()
         int m = 0;
         for(int i = 0; i < rows; i++)
         {
-            //char *p = strtok(tab[i].numberAcc, " ");
             if(numberAcc == tab[i].numberAcc)  
             {
-                //for(int i = 0; i < rows; i++)
                     printf("%d\t%s\t%.2f\t%d\t%.2f\n", tab[i].numberAcc, tab[i].fio, tab[i].summ, tab[i].percent, tab[i].result);
                     m++;
             }    
@@ -81,7 +79,6 @@ int main()
             char *p = strtok(tab[i].fio, " ");
             if(strcmp(p, fio) == 0)  
             {
-                //for(int i = 0; i < rows; i++)
                     printf("%d\t%s\t%.2f\t%d\t%.2f\n", tab[i].numberAcc, tab[i].fio, tab[i].summ, tab[i].percent, tab[i].result);
                     m++;
             }    
