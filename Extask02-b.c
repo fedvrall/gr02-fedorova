@@ -68,44 +68,45 @@ int main()
     }
     putchar('\n');
 
-    struct element *cur = first;
+    //struct element *cur = first;
+    current = first;
     struct element *buffer = 0;
     int count = 0;
-    while(cur != NULL)
+    while(current != NULL)
     {
         for(int i = 0; i < num_marks; i++)
         {
-            if(cur->marks[i] == 2)
+            if(current->marks[i] == 2)
                 count++;
         }
         if(count >= 2)
             {
-                buffer = cur;
-                cur = buffer->prev;
-                cur -> next = buffer -> next;
-                cur = buffer -> next;
-                cur -> prev = buffer -> prev;
+                buffer = current;
+                current = buffer->prev;
+                current -> next = buffer -> next;
+                current = buffer -> next;
+                current -> prev = buffer -> prev;
             }
         count = 0;
-        printf("%s", cur->lastname);
+        printf("%s", current->lastname);
 
         for(int i = 0; i < num_marks; i++)
-            printf(" %d", cur->marks[i]);
+            printf(" %d", current->marks[i]);
         printf("\n");
 
-        cur = cur->next;
+        current = current->next;
     }
    putchar('\n');
    
-    cur = last;
-    while(cur != NULL)
+    current = last;
+    while(current != NULL)
     {
-        printf("%s", cur->lastname);
+        printf("%s", current->lastname);
         for(int i = 0; i < num_marks; i++)
-            printf(" %d", cur->marks[i]);
+            printf(" %d", current->marks[i]);
         printf("\n");
 
-        cur = cur->prev;
+        current = current->prev;
     }
 
     return 0;
