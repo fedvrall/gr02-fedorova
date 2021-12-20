@@ -1,16 +1,17 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#define maxLastname 50
-#define numMarks 3
-#define minMark 2
-#define maxMark 5
+#define max_lastname 50
+#define num_marks 3
+
+#define mark_min 2
+#define mark_max 5
 
 struct element
 {
-    char lastname[maxLastname];
-    int marks[numMarks];
+    char lastname[max_lastname];
+    int marks[num_marks];
 
     struct element *prev;
     struct element *next;
@@ -21,21 +22,21 @@ struct element *last = NULL;
 
 int main()
 {
-    FILE *f = fopen("extask02-a.txt", "r");
+    FILE *f = fopen("Extask02-a.txt", "r");
 
     while(1)
     {
-        char lastname[maxLastname];
-        if (fscanf(f, "%s", lastname) != 1)
+        char lastname[max_lastname];
+        if (fscanf(f, "%s", lastname) != 1) 
             break;
-        
-        struct element *e = (struct element *) malloc (sizeof(struct element));
+
+        struct element *e = (struct element *) malloc(sizeof(struct element));
         if (last == NULL)
         {
-            e->prev = NULL;
-            e-> next = NULL;
             first = e;
             last = e;
+            e-> prev = NULL;
+            e-> next = NULL;
         }
         else
         {
@@ -44,31 +45,33 @@ int main()
             e->next = NULL;
             last = e;
         }
+        e->next = NULL;
+        last = e; 
 
-        strcpy(e->lastname, lastname);
-        for(int i = 0; i < numMarks; i++)
-            e->marks[i] = minMark + rand() % (maxMark - minMark + 1);
+        strcpy(e-> lastname, lastname);
+        for(int i = 0; i < num_marks; i++)
+            e->marks[i] = mark_min + rand() % (mark_max - mark_min + 1);
+
     }
-
     fclose(f);
 
     struct element *current = first;
     while(current != NULL)
     {
         printf("%s", current->lastname);
-        for(int i = 0; i < numMarks; i++)
+        for(int i = 0; i < num_marks; i++)
             printf(" %d", current->marks[i]);
         printf("\n");
 
         current = current->next;
     }
-    printf("\n");
-
+   putchar('\n');
+   
     current = last;
     while(current != NULL)
     {
         printf("%s", current->lastname);
-        for(int i = 0; i < numMarks; i++)
+        for(int i = 0; i < num_marks; i++)
             printf(" %d", current->marks[i]);
         printf("\n");
 
